@@ -12,7 +12,7 @@ public class SystemRepositoryImpl implements ISystemRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public WebsiteAssetsVO findWebsiteAssets () {
+    public WebsiteAssetsVO findWebAssets () {
         String sql = "SELECT * FROM WEBSITE_ASSETS wa";
         return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(WebsiteAssetsVO.class));
     }

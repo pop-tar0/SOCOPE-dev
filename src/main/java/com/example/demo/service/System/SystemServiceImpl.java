@@ -11,7 +11,7 @@ public class SystemServiceImpl implements ISystemService {
     @Autowired
     private ISystemRepository systemRepository;
 
-    public WebsiteAssetsVO getWebsiteAssets () {
-        return systemRepository.findWebsiteAssets();
+    public WebsiteAssetsVO getWebAssets () {
+        return systemRepository.findWebAssets();
     }
 }

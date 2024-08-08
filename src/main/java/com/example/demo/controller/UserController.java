@@ -15,7 +15,7 @@ public class UserController {
     private IUserService userService;
 
     @RequestMapping("/login")
-    public ResponseEntity<UserInfoVO> login () {
+    public ResponseEntity<?> login () {
         UserInfoVO userInfo = userService.getUserInfo();
         return new ResponseEntity<>(userInfo);
     }

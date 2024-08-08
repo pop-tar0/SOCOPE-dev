@@ -14,9 +14,9 @@ public class SystemController {
     @Autowired
     private ISystemService systemService;
 
-    @RequestMapping("/websiteAssets")
-    public ResponseEntity<WebsiteAssetsVO> getWebsiteAssets () {
-        WebsiteAssetsVO assets = systemService.getWebsiteAssets();
+    @RequestMapping("/webAssets")
+    public ResponseEntity<?> getWebAssets () {
+        WebsiteAssetsVO assets = systemService.getWebAssets();
         return new ResponseEntity<>(assets);
     }
 }
